@@ -4,22 +4,14 @@ import CustomGridItemBig from './CustomGridItemBig'
 import CustomGridItemSmall from './CustomGridItemSmall'
 import styles from './styles.css'
 
-
 type Props = {
   gridType: number
-  children: [
-    ReactNode,
-    ReactNode,
-    ReactNode,
-    ReactNode,
-    ReactNode
-  ]
+  children: ReactNode[]
 }
 
-const CustomGrid = ({gridType = 1, children}: Props) => {
-
+const CustomGrid = ({ gridType = 1, children }: Props) => {
   const gridTypeClass: string = `grid__${gridType}`
-   return (
+  return (
     <div className={styles[gridTypeClass]}>
       <CustomGridItemBig
         element={children[0]}
